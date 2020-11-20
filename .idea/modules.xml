@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Netty-code/Netty-code.iml" filepath="$PROJECT_DIR$/Netty-code/Netty-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Netty-demo.iml" filepath="$PROJECT_DIR$/Netty-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nio-study/Nio-study.iml" filepath="$PROJECT_DIR$/Nio-study/Nio-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Study-demo/Study-demo.iml" filepath="$PROJECT_DIR$/Study-demo/Study-demo.iml" />
+    </modules>
+  </component>
+</project>
