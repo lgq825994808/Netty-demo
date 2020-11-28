@@ -2,6 +2,7 @@ package com.adb.netty.protocol;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
@@ -9,11 +10,7 @@ import io.netty.handler.timeout.IdleStateEvent;
 /**
  * 事件处理类 （心跳事件）
  */
-public class NettyProtocolHeartbeatHandler extends SimpleChannelInboundHandler<String>{
-    @Override
-    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
-        System.out.println("数据内容为---"+msg);
-    }
+public class NettyProtocolHeartbeatHandler extends ChannelInboundHandlerAdapter {
 
     //检测到了心跳事件，就触发该方法
     @Override
