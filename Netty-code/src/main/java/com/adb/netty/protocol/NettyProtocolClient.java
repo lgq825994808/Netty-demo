@@ -12,7 +12,7 @@ import io.netty.handler.codec.string.StringEncoder;
 import java.util.Scanner;
 
 /**
- *
+ *使用自定义协议传输数据（客户端）
  */
 public class NettyProtocolClient {
 

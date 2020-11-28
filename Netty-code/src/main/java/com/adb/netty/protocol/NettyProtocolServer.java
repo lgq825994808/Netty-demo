@@ -12,7 +12,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import java.util.concurrent.TimeUnit;
 
 /**
- *
+ *使用自定义协议传输数据（服务端）
  */
 public class NettyProtocolServer {
 
