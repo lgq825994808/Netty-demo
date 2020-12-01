@@ -6,8 +6,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 
 import java.net.SocketAddress;
 
-public class
-NettyProtocolServerHandler extends SimpleChannelInboundHandler<MessageProtocolDto>{
+public class NettyProtocolServerHandler extends SimpleChannelInboundHandler<MessageProtocolDto>{
 
     /**
      * 客户端连接就会调用
