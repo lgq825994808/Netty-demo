@@ -17,7 +17,7 @@ public class ClientBootstrap {
         for (;; ) {
             Thread.sleep(3 * 1000);
             //通过代理对象调用服务提供者的方法(服务)
-            String str="book1";
+            String str="book3";
             String res = service.getData(str);
             System.out.println("调用的结果 res= " + res);
         }
