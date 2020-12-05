@@ -8,6 +8,9 @@ import java.net.SocketAddress;
 
 public class NettyProtocolServerHandler extends SimpleChannelInboundHandler<MessageProtocolDto>{
 
+    int i=0;
+    int t=0;
+
     /**
      * 客户端连接就会调用
      * @param ctx
@@ -15,6 +18,8 @@ public class NettyProtocolServerHandler extends SimpleChannelInboundHandler<Mess
      */
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        i++;
+        System.out.println("i=============="+i);
         SocketAddress socketAddress = ctx.channel().remoteAddress();
         System.out.println("客户端地址为---"+socketAddress.toString());
     }
@@ -27,6 +32,8 @@ public class NettyProtocolServerHandler extends SimpleChannelInboundHandler<Mess
      */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MessageProtocolDto msg) throws Exception {
+        t++;
+        System.out.println("t=================="+t);
         System.out.println("服务端收到的数据为---"+msg.toString());
         Channel channel = ctx.channel();
         String str="客户端你好";
