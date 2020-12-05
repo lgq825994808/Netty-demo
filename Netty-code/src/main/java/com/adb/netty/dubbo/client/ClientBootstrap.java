@@ -14,7 +14,7 @@ public class ClientBootstrap {
         //创建代理对象
         DemoServer service = (DemoServer) customer.getBean(DemoServer.class, str);
         for (;; ) {
-            Thread.sleep(2 * 1000);
+            Thread.sleep(3 * 1000);
             //通过代理对象调用服务提供者的方法(服务)
             String res = service.getData("book");
             System.out.println("调用的结果 res= " + res);
