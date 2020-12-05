@@ -9,7 +9,8 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 
 public class NettyGroupChatServerHandler extends SimpleChannelInboundHandler<String>{
 
-
+    int i=0;
+    int t=0;
     //GlobalEventExecutor.INSTANCE) 是全局的事件执行器，是一个单例
     //可以保存全局的通道 channel
     private static ChannelGroup channelGroup = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
@@ -34,6 +35,8 @@ public class NettyGroupChatServerHandler extends SimpleChannelInboundHandler<Str
     //调用顺序 3 注册好以后调用服务器端的channelActive方法，让其处于激活状态
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        i++;
+        System.out.println("i=============="+i);
         //Channel channel = ctx.channel();
         //channelGroup.writeAndFlush(channel.remoteAddress()+"  上线了");
         System.out.println(ctx.channel().remoteAddress()+" 上线了");
@@ -71,6 +74,8 @@ public class NettyGroupChatServerHandler extends SimpleChannelInboundHandler<Str
      */
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+        t++;
+        System.out.println("t=============="+t);
         Channel channel = ctx.channel();
         String str = channel.remoteAddress() + "  说:" + msg;
         System.out.println(str);
